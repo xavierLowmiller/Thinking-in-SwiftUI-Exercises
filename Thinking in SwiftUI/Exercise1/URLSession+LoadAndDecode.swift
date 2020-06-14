@@ -1,5 +1,5 @@
 import Combine
-import Foundation
+import UIKit
 
 extension URLSession {
   func loadAndDecode<A: Decodable>(_ type: A.Type, url: URL, decoder: JSONDecoder = .snakeCaseDecoder)
@@ -29,6 +29,21 @@ extension URLSession {
       }, receiveValue: { value in
         result = value
       })
+  }
+
+  func loadImage(at url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
+    var token: AnyCancellable?
+    token = Current.urlSession
+      .dataTaskPublisher(for: url)
+      .map(\.data)
+      .compactMap(UIImage.init)
+      .map { Result.success($0) }
+      .catch { Just(.failure($0 as Error)) }
+      .receive(on: DispatchQueue.main)
+      .sink {
+        completion($0)
+        token?.cancel()
+    }
   }
 }
 

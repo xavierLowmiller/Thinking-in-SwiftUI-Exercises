@@ -22,6 +22,7 @@
 		4E4A8290249651FF0021E7E5 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A828F249651FF0021E7E5 /* Remote.swift */; };
 		4E4A829224965DD90021E7E5 /* Result+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A829124965DD90021E7E5 /* Result+Convenience.swift */; };
 		4E4A829424966A650021E7E5 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A829324966A650021E7E5 /* World.swift */; };
+		4E74D0CB2496969000B8A8E3 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E74D0CA2496969000B8A8E3 /* PhotoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		4E4A828F249651FF0021E7E5 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
 		4E4A829124965DD90021E7E5 /* Result+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Convenience.swift"; sourceTree = "<group>"; };
 		4E4A829324966A650021E7E5 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		4E74D0CA2496969000B8A8E3 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				4E4A828B249573D10021E7E5 /* Photo.swift */,
 				4E4A8287249571EF0021E7E5 /* PhotosList.swift */,
+				4E74D0CA2496969000B8A8E3 /* PhotoDetailView.swift */,
 				4E4A828F249651FF0021E7E5 /* Remote.swift */,
 				4E4A829124965DD90021E7E5 /* Result+Convenience.swift */,
 				4E4A8289249573180021E7E5 /* URLSession+LoadAndDecode.swift */,
@@ -304,6 +307,7 @@
 				4E4A8290249651FF0021E7E5 /* Remote.swift in Sources */,
 				4E4A82582494DF360021E7E5 /* SceneDelegate.swift in Sources */,
 				4E4A825A2494DF360021E7E5 /* ContentView.swift in Sources */,
+				4E74D0CB2496969000B8A8E3 /* PhotoDetailView.swift in Sources */,
 				4E4A828A249573180021E7E5 /* URLSession+LoadAndDecode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

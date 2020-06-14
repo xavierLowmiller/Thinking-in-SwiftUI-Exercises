@@ -17,6 +17,7 @@ struct ContentView: View {
           Text("Exercise 1")
         }
       }
+      .navigationBarTitle("Thinking in SwiftUI")
     }
   }
 }
