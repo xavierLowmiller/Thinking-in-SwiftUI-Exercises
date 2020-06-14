@@ -9,13 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
+  @State var counter = 0
+  var body: some View {
+    NavigationView {
+      List {
+        NavigationLink(destination: PhotosList()) {
+          Text("Exercise 1")
+        }
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
