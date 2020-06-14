@@ -1,21 +1,33 @@
-//
-//  PhotosList.swift
-//  Thinking in SwiftUI
-//
-//  Created by Xaver Lohmüller on 13.06.20.
-//  Copyright © 2020 Xaver Lohmüller. All rights reserved.
-//
-
 import SwiftUI
 
 struct PhotosList: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @ObservedObject var remote = Remote<[Photo]>(
+    url: URL(string: "https://picsum.photos/v2/list")!
+  )
+
+  var body: some View {
+    Group {
+      if remote.value != nil {
+        List {
+          ForEach(remote.value!) { photo in
+            Text(photo.author)
+          }
+        }
+      } else if remote.errorMessage != nil {
+        Text("Error loading the photos:\n\n\(remote.errorMessage!)")
+          .multilineTextAlignment(.center)
+      } else {
+        Text("Loading...")
+      }
     }
+    .onAppear {
+      self.remote.refresh()
+    }
+  }
 }
 
 struct PhotosList_Previews: PreviewProvider {
-    static var previews: some View {
-        PhotosList()
-    }
+  static var previews: some View {
+    PhotosList()
+  }
 }

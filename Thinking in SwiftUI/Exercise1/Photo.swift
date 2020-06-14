@@ -1,6 +1,6 @@
 import Foundation
 
-struct Photo: Codable, Equatable {
+struct Photo: Codable, Equatable, Identifiable {
   let id: String
   let author: String
   let width: Int
