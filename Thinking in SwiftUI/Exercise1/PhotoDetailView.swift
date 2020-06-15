@@ -10,15 +10,21 @@ struct PhotoDetailView: View {
   }
   
   var body: some View {
-    Group {
-      if remote.value != nil {
-        Image(uiImage: remote.value!)
-          .resizable()
-          .aspectRatio(.init(width: photo.width, height: photo.height), contentMode: .fit)
-        Spacer()
-      } else {
-        Text("Loading Photo...")
+    VStack {
+      Group {
+        if remote.value != nil {
+          Image(uiImage: remote.value!)
+            .resizable()
+        } else {
+          LoadingView()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
       }
+      .background(Color(.secondarySystemBackground))
+      .aspectRatio(.init(width: photo.width, height: photo.height), contentMode: .fit)
+      .cornerRadius(4)
+      .padding()
+      Spacer()
     }
     .navigationBarTitle(photo.author)
     .onAppear {

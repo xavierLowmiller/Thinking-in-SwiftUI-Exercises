@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3D8E3F249806E200967D53 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D8E3E249806E200967D53 /* LoadingView.swift */; };
 		4E4A82562494DF360021E7E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A82552494DF360021E7E5 /* AppDelegate.swift */; };
 		4E4A82582494DF360021E7E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A82572494DF360021E7E5 /* SceneDelegate.swift */; };
 		4E4A825A2494DF360021E7E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A82592494DF360021E7E5 /* ContentView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E3D8E3E249806E200967D53 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4E4A82522494DF360021E7E5 /* Thinking in SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thinking in SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4A82552494DF360021E7E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E4A82572494DF360021E7E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,9 +160,10 @@
 		4E4A82862495718A0021E7E5 /* Exercise1 */ = {
 			isa = PBXGroup;
 			children = (
+				4E3D8E3E249806E200967D53 /* LoadingView.swift */,
 				4E4A828B249573D10021E7E5 /* Photo.swift */,
-				4E4A8287249571EF0021E7E5 /* PhotosList.swift */,
 				4E74D0CA2496969000B8A8E3 /* PhotoDetailView.swift */,
+				4E4A8287249571EF0021E7E5 /* PhotosList.swift */,
 				4E4A828F249651FF0021E7E5 /* Remote.swift */,
 				4E4A829124965DD90021E7E5 /* Result+Convenience.swift */,
 				4E4A8289249573180021E7E5 /* URLSession+LoadAndDecode.swift */,
@@ -302,6 +305,7 @@
 				4E4A829424966A650021E7E5 /* World.swift in Sources */,
 				4E4A828C249573D10021E7E5 /* Photo.swift in Sources */,
 				4E4A8288249571EF0021E7E5 /* PhotosList.swift in Sources */,
+				4E3D8E3F249806E200967D53 /* LoadingView.swift in Sources */,
 				4E4A829224965DD90021E7E5 /* Result+Convenience.swift in Sources */,
 				4E4A82562494DF360021E7E5 /* AppDelegate.swift in Sources */,
 				4E4A8290249651FF0021E7E5 /* Remote.swift in Sources */,
