@@ -1,8 +1,8 @@
 import Combine
 import UIKit
 
-typealias URLLoader = (URL, @escaping (Data?) -> Void) -> Void
-typealias DataTransform<A> = (Data) -> A?
+typealias URLLoader = (URL, @escaping (Result<Data, Error>) -> Void) -> Void
+typealias DataTransform<A> = (Result<Data, Error>) -> Result<A, Error>
 
 final class Remote<A>: ObservableObject {
   @Published var result: Result<A, Error>?
@@ -28,39 +28,46 @@ final class Remote<A>: ObservableObject {
   }
 
   func load() {
-    urlLoader(url) { data in
-      if let data = data, let result = self.transform(data) {
-        self.result = .success(result)
-      } else {
-        self.result = .failure(LoadingError())
-      }
+    urlLoader(url) { result in
+      self.result = self.transform(result)
     }
   }
 }
 
-private func loadViaURLSession(url: URL, completion: @escaping (Data?) -> Void) {
-  Current.urlSession.dataTask(with: url) { data, _, _ in
+private func loadViaURLSession(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
+  Current.urlSession.dataTask(with: url) { data, _, error in
     Current.mainQueue.async {
-      completion(data)
+      completion(Result(success: data, failure: error ?? LoadingError()))
     }
   }.resume()
 }
 
 extension Remote where A: Decodable {
   convenience init(url: URL, urlLoader: @escaping URLLoader = loadViaURLSession) {
-    self.init(url: url, urlLoader: urlLoader) { data in
-      try? JSONDecoder.snakeCaseDecoder.decode(A.self, from: data)
+    self.init(url: url, urlLoader: urlLoader) { result in
+      result.tryMap { data in
+        try JSONDecoder.snakeCaseDecoder.decode(A.self, from: data)
+      }
     }
   }
 }
 
 extension Remote where A == UIImage {
   convenience init(url: URL, urlLoader: @escaping URLLoader = loadViaURLSession) {
-    self.init(url: url, urlLoader: urlLoader, transform: UIImage.init)
+    self.init(url: url, urlLoader: urlLoader) { result in
+      result.tryMap { data in
+        if let image = UIImage(data: data) {
+          return image
+        } else {
+          throw ImageDecodingError()
+        }
+      }
+    }
   }
 }
 
 struct LoadingError: Error {}
+struct ImageDecodingError: Error {}
 
 private extension JSONDecoder {
   static let snakeCaseDecoder: JSONDecoder = {

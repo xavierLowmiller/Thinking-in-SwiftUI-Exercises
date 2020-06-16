@@ -17,7 +17,7 @@ class RemoteTests: XCTestCase {
     """
     let remote = Remote<[User]>(
       url: URL(string: "https://example.org/users")!,
-      urlLoader: { $1(data) }
+      urlLoader: { $1(.success(data)) }
     )
 
     // When
@@ -32,7 +32,7 @@ class RemoteTests: XCTestCase {
     // Given
     let remote = Remote<[User]>(
       url: URL(string: "https://example.org/users")!,
-      urlLoader: { $1(nil) }
+      urlLoader: { $1(.failure(LoadingError())) }
     )
 
     // When
@@ -52,7 +52,7 @@ class RemoteTests: XCTestCase {
     """
     let remote = Remote<[User]>(
       url: URL(string: "https://example.org/users")!,
-      urlLoader: { $1(data) }
+      urlLoader: { $1(.success(data)) }
     )
 
     // When
