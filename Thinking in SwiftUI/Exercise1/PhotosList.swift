@@ -20,7 +20,7 @@ struct PhotosList: View {
           .multilineTextAlignment(.center)
       } else {
         LoadingView()
-          .onAppear(perform: self.remote.load)
+//          .onAppear(perform: self.remote.load)
       }
     }
     .navigationBarTitle("Exercise 1")

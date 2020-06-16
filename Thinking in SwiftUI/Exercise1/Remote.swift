@@ -5,7 +5,12 @@ typealias URLLoader = (URL, @escaping (Data?) -> Void) -> Void
 typealias DataTransform<A> = (Data) -> A?
 
 final class Remote<A>: ObservableObject {
-  @Published var result: Result<A, Error>?
+
+  lazy var objectWillChange = ObservableObjectPublisher()
+    .handleEvents(receiveSubscription: { _ in self.load() })
+  var result: Result<A, Error>? {
+    willSet { objectWillChange.upstream.send() }
+  }
 
   let url: URL
   private let urlLoader: URLLoader
@@ -27,7 +32,7 @@ final class Remote<A>: ObservableObject {
     self.urlLoader = urlLoader
   }
 
-  func load() {
+  private func load() {
     urlLoader(url) { data in
       if let data = data, let result = self.transform(data) {
         self.result = .success(result)

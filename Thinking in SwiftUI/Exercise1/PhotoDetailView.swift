@@ -18,7 +18,7 @@ struct PhotoDetailView: View {
         } else {
           LoadingView()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .onAppear(perform: self.remote.load)
+//            .onAppear(perform: self.remote.load)
         }
       }
       .background(Color(.secondarySystemBackground))
