@@ -19,11 +19,9 @@ struct PhotosList: View {
         Text("Error loading the photos:\n\n\(remote.errorMessage!)")
           .multilineTextAlignment(.center)
       } else {
-        Text("Loading...")
+        LoadingView()
+          .onAppear(perform: self.remote.load)
       }
-    }
-    .onAppear {
-      self.remote.refresh()
     }
     .navigationBarTitle("Exercise 1")
   }

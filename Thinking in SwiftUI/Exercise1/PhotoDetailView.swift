@@ -18,6 +18,7 @@ struct PhotoDetailView: View {
         } else {
           LoadingView()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .onAppear(perform: self.remote.load)
         }
       }
       .background(Color(.secondarySystemBackground))
@@ -27,8 +28,5 @@ struct PhotoDetailView: View {
       Spacer()
     }
     .navigationBarTitle(photo.author)
-    .onAppear {
-      self.remote.refresh()
-    }
   }
 }

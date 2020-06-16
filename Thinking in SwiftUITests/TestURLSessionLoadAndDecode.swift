@@ -2,98 +2,64 @@ import Combine
 import XCTest
 @testable import Thinking_in_SwiftUI
 
-class TestURLSessionLoadAndDecode: XCTestCase {
+class RemoteTests: XCTestCase {
 
   private struct User: Codable, Equatable {
     let name: String
   }
 
-  let testSession: URLSession = {
-    let configuration = URLSessionConfiguration.ephemeral
-    configuration.protocolClasses = [ConfigurableURLProtocol.classForCoder()]
-    return URLSession(configuration: configuration)
-  }()
-
-  func testSuccessfulLoad() throws {
+  func testRemoteLoad() {
     // Given
-    ConfigurableURLProtocol.nextData = """
+    let data: Data = """
     [{
       "name": "Test"
     }]
-    """.data(using: .utf8)!
-    ConfigurableURLProtocol.error = nil
-
-    let expected = [User(name: "Test")]
-
-    // When
-    let result = try testSession
-      .loadAndDecode([User].self, url: URL(string: "https://example.org/users")!)
-      .waitOne()
-
-    XCTAssertEqual(try result.get(), expected)
-  }
-
-  func testNetworkError() throws {
-    // Given
-    struct TestNetworkError: Error {}
-    ConfigurableURLProtocol.error = TestNetworkError()
+    """
+    let remote = Remote<[User]>(
+      url: URL(string: "https://example.org/users")!,
+      urlLoader: { $1(data) }
+    )
 
     // When
-    let result = try testSession
-      .loadAndDecode([User].self, url: URL(string: "https://example.org/users")!)
-      .waitOne()
+    remote.load()
 
     // Then
-    XCTAssertThrowsError(try result.get())
+    XCTAssertEqual(remote.value, [User(name: "Test")])
+    XCTAssertNil(remote.errorMessage)
   }
 
-  func testDecodingError() throws {
+  func testNetworkError() {
     // Given
-    ConfigurableURLProtocol.nextData = """
+    let remote = Remote<[User]>(
+      url: URL(string: "https://example.org/users")!,
+      urlLoader: { $1(nil) }
+    )
+
+    // When
+    remote.load()
+
+    // Then
+    XCTAssertNotNil(remote.errorMessage)
+    XCTAssertNil(remote.value)
+  }
+
+  func testDecodingError() {
+    // Given
+    let data: Data = """
     [{
-      "some": "wrong key"
+      "some": "Wrong Key"
     }]
-    """.data(using: .utf8)!
-    ConfigurableURLProtocol.error = nil
+    """
+    let remote = Remote<[User]>(
+      url: URL(string: "https://example.org/users")!,
+      urlLoader: { $1(data) }
+    )
 
     // When
-    let result = try testSession
-      .loadAndDecode([User].self, url: URL(string: "https://example.org/users")!)
-      .waitOne()
+    remote.load()
 
     // Then
-    XCTAssertThrowsError(try result.get())
+    XCTAssertNotNil(remote.errorMessage)
+    XCTAssertNil(remote.value)
   }
-}
-
-private class ConfigurableURLProtocol: URLProtocol {
-  static var nextData = Data()
-  static var nextResponseCode = 200
-  static var nextHeaderFields: [String: String]? = nil
-  static var httpVersion = "1.1"
-  static var error: Error? = nil
-
-  override class func canInit(with request: URLRequest) -> Bool { true }
-
-  override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
-
-  override func startLoading() {
-
-    if let error = Self.error {
-      client?.urlProtocol(self, didFailWithError: error)
-    } else {
-
-      let response = HTTPURLResponse(
-        url: request.url!,
-        statusCode: Self.nextResponseCode,
-        httpVersion: Self.httpVersion,
-        headerFields: Self.nextHeaderFields
-        )!
-      client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .allowed)
-      client?.urlProtocol(self, didLoad: Self.nextData)
-      client?.urlProtocolDidFinishLoading(self)
-    }
-  }
-
-  override func stopLoading() {}
 }
