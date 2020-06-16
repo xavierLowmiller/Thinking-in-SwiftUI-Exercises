@@ -66,8 +66,8 @@ extension Remote where A == UIImage {
   }
 }
 
-struct LoadingError: Error {}
-struct ImageDecodingError: Error {}
+struct LoadingError: Error, Equatable {}
+struct ImageDecodingError: Error, Equatable {}
 
 private extension JSONDecoder {
   static let snakeCaseDecoder: JSONDecoder = {

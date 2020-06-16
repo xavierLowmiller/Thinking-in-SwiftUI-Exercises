@@ -23,6 +23,7 @@
 		4E4A8290249651FF0021E7E5 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A828F249651FF0021E7E5 /* Remote.swift */; };
 		4E4A829224965DD90021E7E5 /* Result+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A829124965DD90021E7E5 /* Result+Convenience.swift */; };
 		4E4A829424966A650021E7E5 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A829324966A650021E7E5 /* World.swift */; };
+		4E65CEBA249974C300ACDD79 /* ResultConvenienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65CEB9249974C300ACDD79 /* ResultConvenienceTests.swift */; };
 		4E74D0CB2496969000B8A8E3 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E74D0CA2496969000B8A8E3 /* PhotoDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		4E4A828F249651FF0021E7E5 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
 		4E4A829124965DD90021E7E5 /* Result+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Convenience.swift"; sourceTree = "<group>"; };
 		4E4A829324966A650021E7E5 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		4E65CEB9249974C300ACDD79 /* ResultConvenienceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultConvenienceTests.swift; sourceTree = "<group>"; };
 		4E74D0CA2496969000B8A8E3 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				4E4A826C2494DF380021E7E5 /* RemoteTests.swift */,
+				4E65CEB9249974C300ACDD79 /* ResultConvenienceTests.swift */,
 				4E3D8E402498147400967D53 /* XCTest+Convenience.swift */,
 				4E4A828D24964EAD0021E7E5 /* Publisher+Testing.swift */,
 				4E4A826E2494DF380021E7E5 /* Info.plist */,
@@ -321,6 +324,7 @@
 			files = (
 				4E4A826D2494DF380021E7E5 /* RemoteTests.swift in Sources */,
 				4E3D8E412498147400967D53 /* XCTest+Convenience.swift in Sources */,
+				4E65CEBA249974C300ACDD79 /* ResultConvenienceTests.swift in Sources */,
 				4E4A828E24964EAD0021E7E5 /* Publisher+Testing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
