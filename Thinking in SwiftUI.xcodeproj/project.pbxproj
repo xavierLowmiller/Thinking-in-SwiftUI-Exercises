@@ -15,7 +15,7 @@
 		4E4A825C2494DF370021E7E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4A825B2494DF370021E7E5 /* Assets.xcassets */; };
 		4E4A825F2494DF370021E7E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4A825E2494DF370021E7E5 /* Preview Assets.xcassets */; };
 		4E4A82622494DF370021E7E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4A82602494DF370021E7E5 /* LaunchScreen.storyboard */; };
-		4E4A826D2494DF380021E7E5 /* TestURLSessionLoadAndDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A826C2494DF380021E7E5 /* TestURLSessionLoadAndDecode.swift */; };
+		4E4A826D2494DF380021E7E5 /* RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A826C2494DF380021E7E5 /* RemoteTests.swift */; };
 		4E4A82782494DF380021E7E5 /* Thinking_in_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A82772494DF380021E7E5 /* Thinking_in_SwiftUIUITests.swift */; };
 		4E4A8288249571EF0021E7E5 /* PhotosList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A8287249571EF0021E7E5 /* PhotosList.swift */; };
 		4E4A828C249573D10021E7E5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A828B249573D10021E7E5 /* Photo.swift */; };
@@ -55,7 +55,7 @@
 		4E4A82612494DF370021E7E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E4A82632494DF370021E7E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4A82682494DF380021E7E5 /* Thinking in SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thinking in SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E4A826C2494DF380021E7E5 /* TestURLSessionLoadAndDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURLSessionLoadAndDecode.swift; sourceTree = "<group>"; };
+		4E4A826C2494DF380021E7E5 /* RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTests.swift; sourceTree = "<group>"; };
 		4E4A826E2494DF380021E7E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4A82732494DF380021E7E5 /* Thinking in SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thinking in SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4A82772494DF380021E7E5 /* Thinking_in_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thinking_in_SwiftUIUITests.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		4E4A826B2494DF380021E7E5 /* Thinking in SwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4E4A826C2494DF380021E7E5 /* TestURLSessionLoadAndDecode.swift */,
+				4E4A826C2494DF380021E7E5 /* RemoteTests.swift */,
 				4E3D8E402498147400967D53 /* XCTest+Convenience.swift */,
 				4E4A828D24964EAD0021E7E5 /* Publisher+Testing.swift */,
 				4E4A826E2494DF380021E7E5 /* Info.plist */,
@@ -319,7 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4A826D2494DF380021E7E5 /* TestURLSessionLoadAndDecode.swift in Sources */,
+				4E4A826D2494DF380021E7E5 /* RemoteTests.swift in Sources */,
 				4E3D8E412498147400967D53 /* XCTest+Convenience.swift in Sources */,
 				4E4A828E24964EAD0021E7E5 /* Publisher+Testing.swift in Sources */,
 			);
