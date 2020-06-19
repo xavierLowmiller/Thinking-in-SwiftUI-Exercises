@@ -100,20 +100,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E1F167B249CA41000A69CA5 /* Exercise 2 */ = {
+		4E1F167B249CA41000A69CA5 /* Exercise Chapter 3 */ = {
 			isa = PBXGroup;
 			children = (
 				4E1F167C249CA43D00A69CA5 /* KnobView.swift */,
 			);
-			path = "Exercise 2";
+			path = "Exercise Chapter 3";
 			sourceTree = "<group>";
 		};
-		4E1F167E249CADB300A69CA5 /* Chapter 3 */ = {
+		4E1F167E249CADB300A69CA5 /* Notes Chapter 4 */ = {
 			isa = PBXGroup;
 			children = (
 				4E1F167F249CADC600A69CA5 /* MeasureBehavior.swift */,
 			);
-			path = "Chapter 3";
+			path = "Notes Chapter 4";
 			sourceTree = "<group>";
 		};
 		4E4A82492494DF360021E7E5 = {
@@ -146,9 +146,9 @@
 				4E4A829324966A650021E7E5 /* World.swift */,
 				4E4A825B2494DF370021E7E5 /* Assets.xcassets */,
 				4E4A82602494DF370021E7E5 /* LaunchScreen.storyboard */,
-				4E4A82862495718A0021E7E5 /* Exercise1 */,
-				4E1F167B249CA41000A69CA5 /* Exercise 2 */,
-				4E1F167E249CADB300A69CA5 /* Chapter 3 */,
+				4E4A82862495718A0021E7E5 /* Exercise Chapter 2 */,
+				4E1F167B249CA41000A69CA5 /* Exercise Chapter 3 */,
+				4E1F167E249CADB300A69CA5 /* Notes Chapter 4 */,
 				4E4A825D2494DF370021E7E5 /* Preview Content */,
 			);
 			path = "Thinking in SwiftUI";
@@ -183,7 +183,7 @@
 			path = "Thinking in SwiftUIUITests";
 			sourceTree = "<group>";
 		};
-		4E4A82862495718A0021E7E5 /* Exercise1 */ = {
+		4E4A82862495718A0021E7E5 /* Exercise Chapter 2 */ = {
 			isa = PBXGroup;
 			children = (
 				4E3D8E3E249806E200967D53 /* LoadingView.swift */,
@@ -193,7 +193,7 @@
 				4E4A828F249651FF0021E7E5 /* Remote.swift */,
 				4E4A829124965DD90021E7E5 /* Result+Convenience.swift */,
 			);
-			path = Exercise1;
+			path = "Exercise Chapter 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
