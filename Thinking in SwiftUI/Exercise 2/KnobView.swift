@@ -55,11 +55,13 @@ struct Knob: View {
 struct KnobView: View {
   @State var value: Double = 0.5
   @State var knobSize: CGFloat = 0.1
+  @State private var hue: Double = 0
 
   var body: some View {
     VStack {
       Knob(value: $value)
         .frame(width: 100, height: 100)
+        .knobColor(Color(hue: hue, saturation: 1, brightness: 1))
       HStack {
         Text("Value")
         Slider(value: $value, in: 0...1)
@@ -67,6 +69,10 @@ struct KnobView: View {
       HStack {
         Text("Knob Size")
         Slider(value: $knobSize, in: 0...0.4)
+      }
+      HStack {
+        Text("Hue")
+        Slider(value: $hue, in: 0...1)
       }
       Button(action: {
         withAnimation(.default) {
@@ -79,17 +85,7 @@ struct KnobView: View {
 
 struct KnobView_Previews: PreviewProvider {
   static var previews: some View {
-    Group {
-      KnobView()
-      KnobView()
-        .colorScheme(.dark)
-      KnobView()
-        .knobColor(.blue)
-      KnobView()
-        .knobColor(.black)
-      KnobView()
-        .knobColor(.purple)
-    }
+    KnobView()
       .previewLayout(.sizeThatFits)
   }
 }
