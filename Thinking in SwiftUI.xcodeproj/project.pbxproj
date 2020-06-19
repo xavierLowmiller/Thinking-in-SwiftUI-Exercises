@@ -11,6 +11,7 @@
 		4E1F1680249CADC600A69CA5 /* MeasureBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F167F249CADC600A69CA5 /* MeasureBehavior.swift */; };
 		4E1F1683249CD63600A69CA5 /* Collapsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F1682249CD63600A69CA5 /* Collapsible.swift */; };
 		4E1F1686249CD9C200A69CA5 /* Chapter4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F1685249CD9C200A69CA5 /* Chapter4View.swift */; };
+		4E1F1688249CE3B400A69CA5 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F1687249CE3B400A69CA5 /* BadgeView.swift */; };
 		4E3D8E3F249806E200967D53 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D8E3E249806E200967D53 /* LoadingView.swift */; };
 		4E3D8E412498147400967D53 /* XCTest+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D8E402498147400967D53 /* XCTest+Convenience.swift */; };
 		4E4A82562494DF360021E7E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A82552494DF360021E7E5 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		4E1F167F249CADC600A69CA5 /* MeasureBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureBehavior.swift; sourceTree = "<group>"; };
 		4E1F1682249CD63600A69CA5 /* Collapsible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collapsible.swift; sourceTree = "<group>"; };
 		4E1F1685249CD9C200A69CA5 /* Chapter4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4View.swift; sourceTree = "<group>"; };
+		4E1F1687249CE3B400A69CA5 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		4E3D8E3E249806E200967D53 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4E3D8E402498147400967D53 /* XCTest+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Convenience.swift"; sourceTree = "<group>"; };
 		4E4A82522494DF360021E7E5 /* Thinking in SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thinking in SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				4E1F1682249CD63600A69CA5 /* Collapsible.swift */,
+				4E1F1687249CE3B400A69CA5 /* BadgeView.swift */,
 				4E1F1685249CD9C200A69CA5 /* Chapter4View.swift */,
 			);
 			path = "Exercise Chapter 4";
@@ -347,6 +350,7 @@
 				4E4A8288249571EF0021E7E5 /* PhotosList.swift in Sources */,
 				4E3D8E3F249806E200967D53 /* LoadingView.swift in Sources */,
 				4E1F1686249CD9C200A69CA5 /* Chapter4View.swift in Sources */,
+				4E1F1688249CE3B400A69CA5 /* BadgeView.swift in Sources */,
 				4E4A829224965DD90021E7E5 /* Result+Convenience.swift in Sources */,
 				4E1F1680249CADC600A69CA5 /* MeasureBehavior.swift in Sources */,
 				4E4A82562494DF360021E7E5 /* AppDelegate.swift in Sources */,

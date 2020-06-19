@@ -7,6 +7,9 @@ struct Chapter4View: View {
       NavigationLink(destination: CollapsibleExerciseView()) {
         Text("Collapsible HStack")
       }
+      NavigationLink(destination: BadgeExerciseView()) {
+        Text("Badge View")
+      }
     }.navigationBarTitle("Chapter 4")
   }
 }
@@ -20,7 +23,7 @@ struct CollapsibleExerciseView: View {
           .frame(width: width, height: width)
           .foregroundColor(Color(white: 1 - Double(width / 200)))
       }
-//      .border(Color.black)
+      //      .border(Color.black)
       Button(isExpanded ? "Collapse" : "Expand") {
         self.isExpanded.toggle()
       }
@@ -28,6 +31,23 @@ struct CollapsibleExerciseView: View {
   }
 }
 
+struct BadgeExerciseView: View {
+  @State private var count = 1
+
+  var body: some View {
+    VStack {
+      Text("Hello")
+        .padding(10)
+        .background(Color.gray)
+        .cornerRadius(5)
+        .badge(count: count)
+      HStack {
+        Button("+") { self.count += 1 }
+        Button("-") { self.count -= 1 }
+      }.font(.largeTitle)
+    }
+  }
+}
 
 struct Chapter4View_Previews: PreviewProvider {
   static var previews: some View {
@@ -36,6 +56,7 @@ struct Chapter4View_Previews: PreviewProvider {
         Chapter4View()
       }
       CollapsibleExerciseView()
+      BadgeExerciseView()
     }
   }
 }
