@@ -30,3 +30,11 @@ struct PhotoDetailView: View {
     .navigationBarTitle(photo.author)
   }
 }
+
+#if DEBUG
+struct PhotoDetailView_Previews: PreviewProvider {
+  static var previews: some View {
+    PhotoDetailView(photo: .testValue)
+  }
+}
+#endif
