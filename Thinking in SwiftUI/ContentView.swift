@@ -16,6 +16,9 @@ struct ContentView: View {
         NavigationLink(destination: PhotosList()) {
           Text("Exercise 1")
         }
+        NavigationLink(destination: KnobView()) {
+          Text("Exercise 2")
+        }
       }
       .navigationBarTitle("Thinking in SwiftUI")
     }
