@@ -14,13 +14,35 @@ struct KnobShape: Shape {
   }
 }
 
+struct ColorKey: EnvironmentKey {
+  static let defaultValue: Color? = nil
+}
+
+extension EnvironmentValues {
+  var knobColor: Color? {
+    get { self[ColorKey.self] }
+    set { self[ColorKey.self] = newValue }
+  }
+}
+
+extension View {
+  func knobColor(_ color: Color?) -> some View {
+    environment(\.knobColor, color)
+  }
+}
+
 struct Knob: View {
   @Binding var value: Double // should be between 0 and 1
-  @Environment(\.colorScheme) var colorScheme
+  @Environment(\.colorScheme) var colorScheme: ColorScheme
+  @Environment(\.knobColor) var knobColor: Color?
+
+  var fillColor: Color {
+    knobColor ?? (colorScheme == .dark ? .white : .black)
+  }
 
   var body: some View {
     KnobShape()
-      .fill(colorScheme == .dark ? Color.white : Color.black)
+      .fill(fillColor)
       .rotationEffect(Angle(degrees: value * 330))
       .onTapGesture {
         withAnimation(.default) {
@@ -57,6 +79,17 @@ struct KnobView: View {
 
 struct KnobView_Previews: PreviewProvider {
   static var previews: some View {
-    KnobView()
+    Group {
+      KnobView()
+      KnobView()
+        .colorScheme(.dark)
+      KnobView()
+        .knobColor(.blue)
+      KnobView()
+        .knobColor(.black)
+      KnobView()
+        .knobColor(.purple)
+    }
+      .previewLayout(.sizeThatFits)
   }
 }
