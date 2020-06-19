@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension View {
-  func badge(count: Int) -> some View {
+  func badge(count: UInt) -> some View {
     let width: CGFloat = count == 0 ? 0 : 12 + 12 * CGFloat(count.numberOfDigits)
     let height: CGFloat = count == 0 ? 0 : 24
 
@@ -21,9 +21,9 @@ extension View {
   }
 }
 
-private extension Int {
+private extension UInt {
   var numberOfDigits: Int {
-    var number = self < 0 ? -self : self
+    var number = self
     var numberOfDigits = 0
     while number != 0 {
       number /= 10

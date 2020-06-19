@@ -32,7 +32,7 @@ struct CollapsibleExerciseView: View {
 }
 
 struct BadgeExerciseView: View {
-  @State private var count = 1
+  @State private var count: UInt = 1
 
   var body: some View {
     VStack {
@@ -43,7 +43,10 @@ struct BadgeExerciseView: View {
         .badge(count: count)
       HStack {
         Button("+") { self.count += 1 }
-        Button("-") { self.count -= 1 }
+        Button("-") {
+          guard self.count > 0 else { return }
+          self.count -= 1
+        }
       }.font(.largeTitle)
     }
   }
