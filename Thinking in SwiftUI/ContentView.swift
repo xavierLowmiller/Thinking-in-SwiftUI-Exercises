@@ -1,11 +1,3 @@
-//
-//  ContentView.swift
-//  Thinking in SwiftUI
-//
-//  Created by Xaver Lohmüller on 13.06.20.
-//  Copyright © 2020 Xaver Lohmüller. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -21,6 +13,9 @@ struct ContentView: View {
         }
         NavigationLink(destination: Chapter4View()) {
           Text("Exercise Chapter 4")
+        }
+        NavigationLink(destination: Chapter5View()) {
+          Text("Exercise Chapter 5")
         }
       }
       .navigationBarTitle("Thinking in SwiftUI")
