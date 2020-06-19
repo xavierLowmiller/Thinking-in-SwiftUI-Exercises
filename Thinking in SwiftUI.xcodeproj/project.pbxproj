@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4E1F167D249CA43D00A69CA5 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F167C249CA43D00A69CA5 /* KnobView.swift */; };
 		4E1F1680249CADC600A69CA5 /* MeasureBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F167F249CADC600A69CA5 /* MeasureBehavior.swift */; };
+		4E1F1683249CD63600A69CA5 /* Collapsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F1682249CD63600A69CA5 /* Collapsible.swift */; };
+		4E1F1686249CD9C200A69CA5 /* Chapter4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F1685249CD9C200A69CA5 /* Chapter4View.swift */; };
 		4E3D8E3F249806E200967D53 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D8E3E249806E200967D53 /* LoadingView.swift */; };
 		4E3D8E412498147400967D53 /* XCTest+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D8E402498147400967D53 /* XCTest+Convenience.swift */; };
 		4E4A82562494DF360021E7E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A82552494DF360021E7E5 /* AppDelegate.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		4E1F167C249CA43D00A69CA5 /* KnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
 		4E1F167F249CADC600A69CA5 /* MeasureBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureBehavior.swift; sourceTree = "<group>"; };
+		4E1F1682249CD63600A69CA5 /* Collapsible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collapsible.swift; sourceTree = "<group>"; };
+		4E1F1685249CD9C200A69CA5 /* Chapter4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4View.swift; sourceTree = "<group>"; };
 		4E3D8E3E249806E200967D53 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4E3D8E402498147400967D53 /* XCTest+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Convenience.swift"; sourceTree = "<group>"; };
 		4E4A82522494DF360021E7E5 /* Thinking in SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thinking in SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,15 @@
 			path = "Notes Chapter 4";
 			sourceTree = "<group>";
 		};
+		4E1F1681249CD61B00A69CA5 /* Exercise Chapter 4 */ = {
+			isa = PBXGroup;
+			children = (
+				4E1F1682249CD63600A69CA5 /* Collapsible.swift */,
+				4E1F1685249CD9C200A69CA5 /* Chapter4View.swift */,
+			);
+			path = "Exercise Chapter 4";
+			sourceTree = "<group>";
+		};
 		4E4A82492494DF360021E7E5 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 				4E4A82862495718A0021E7E5 /* Exercise Chapter 2 */,
 				4E1F167B249CA41000A69CA5 /* Exercise Chapter 3 */,
 				4E1F167E249CADB300A69CA5 /* Notes Chapter 4 */,
+				4E1F1681249CD61B00A69CA5 /* Exercise Chapter 4 */,
 				4E4A825D2494DF370021E7E5 /* Preview Content */,
 			);
 			path = "Thinking in SwiftUI";
@@ -332,6 +346,7 @@
 				4E4A828C249573D10021E7E5 /* Photo.swift in Sources */,
 				4E4A8288249571EF0021E7E5 /* PhotosList.swift in Sources */,
 				4E3D8E3F249806E200967D53 /* LoadingView.swift in Sources */,
+				4E1F1686249CD9C200A69CA5 /* Chapter4View.swift in Sources */,
 				4E4A829224965DD90021E7E5 /* Result+Convenience.swift in Sources */,
 				4E1F1680249CADC600A69CA5 /* MeasureBehavior.swift in Sources */,
 				4E4A82562494DF360021E7E5 /* AppDelegate.swift in Sources */,
@@ -339,6 +354,7 @@
 				4E4A82582494DF360021E7E5 /* SceneDelegate.swift in Sources */,
 				4E4A825A2494DF360021E7E5 /* ContentView.swift in Sources */,
 				4E74D0CB2496969000B8A8E3 /* PhotoDetailView.swift in Sources */,
+				4E1F1683249CD63600A69CA5 /* Collapsible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

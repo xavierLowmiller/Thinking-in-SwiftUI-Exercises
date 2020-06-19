@@ -14,10 +14,13 @@ struct ContentView: View {
     NavigationView {
       List {
         NavigationLink(destination: PhotosList()) {
-          Text("Exercise 1")
+          Text("Exercise Chapter 2")
         }
         NavigationLink(destination: KnobView()) {
-          Text("Exercise 2")
+          Text("Exercise Chapter 3")
+        }
+        NavigationLink(destination: Chapter4View()) {
+          Text("Exercise Chapter 4")
         }
       }
       .navigationBarTitle("Thinking in SwiftUI")
