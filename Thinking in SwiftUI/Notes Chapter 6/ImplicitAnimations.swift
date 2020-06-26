@@ -27,36 +27,3 @@ struct LoadingIndicator: View {
 			.onAppear { self.isAnimating = true }
 	}
 }
-
-struct TransitionAnimationView: View {
-  @State private var visible = false
-
-  var body: some View {
-    VStack {
-      Button("Toggle") { visible.toggle() }
-      if visible {
-        Rectangle()
-          .fill(Color.blue)
-          .frame(width: 100, height: 100)
-          .transition(.slide)
-//          .transition(AnyTransition
-//                        .move(edge: .leading)
-//                        .combined(with: .opacity))
-          .animation(.default)
-      } else {
-        Color.clear
-          .frame(width: 100, height: 100)
-      }
-    }
-  }
-}
-
-struct ImplicitAnimations_Previews: PreviewProvider {
-	static var previews: some View {
-		Group {
-			AnimatedButtonView()
-			LoadingIndicator()
-      TransitionAnimationView()
-		}.previewLayout(.fixed(width: 300, height: 300))
-	}
-}
