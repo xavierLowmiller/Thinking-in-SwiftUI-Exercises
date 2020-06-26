@@ -1,20 +1,20 @@
 import SwiftUI
 
-struct WidthPreference: PreferenceKey {
+private struct WidthPreference: PreferenceKey {
 	static let defaultValue: [Int: CGFloat] = [:]
 	static func reduce(value: inout Value, nextValue: () -> Value) {
 		value.merge(nextValue(), uniquingKeysWith: max)
 	}
 }
 
-struct HeightPreference: PreferenceKey {
+private struct HeightPreference: PreferenceKey {
 	static let defaultValue: [Int: CGFloat] = [:]
 	static func reduce(value: inout Value, nextValue: () -> Value) {
 		value.merge(nextValue(), uniquingKeysWith: max)
 	}
 }
 
-struct CollectMaxWidth: ViewModifier {
+private struct CollectMaxWidth: ViewModifier {
 	var index: Int
 	func body(content: Content) -> some View {
 		content.background(GeometryReader { proxy in
@@ -26,7 +26,7 @@ struct CollectMaxWidth: ViewModifier {
 	}
 }
 
-struct CollectMaxHeight: ViewModifier {
+private struct CollectMaxHeight: ViewModifier {
 	var index: Int
 	func body(content: Content) -> some View {
 		content.background(GeometryReader { proxy in
