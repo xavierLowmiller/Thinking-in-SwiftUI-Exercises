@@ -6,9 +6,18 @@ struct Chapter6View: View {
 			NavigationLink(destination: AnimatedButtonView()) {
 				Text("Animated Button View")
 			}
-			NavigationLink(destination: LoadingIndicator()) {
-				Text("Loading Indicator")
-			}
+      NavigationLink(destination: LoadingIndicator()) {
+        Text("Loading Indicator")
+      }
+      NavigationLink(destination: TransitionAnimationView()) {
+        Text("Transition Animation")
+      }
+      NavigationLink(destination: LoadingIndicatorImplicit()) {
+        Text("Loading Indicator (Implicit)")
+      }
+      NavigationLink(destination: LoadingIndicatorExplicit()) {
+        Text("Loading Indicator (Explicit)")
+      }
 		}
 	}
 }
