@@ -14,9 +14,12 @@ struct ContentView: View {
         NavigationLink(destination: Chapter4View()) {
           Text("Exercise Chapter 4")
         }
-        NavigationLink(destination: Chapter5View()) {
-          Text("Exercise Chapter 5")
-        }
+				NavigationLink(destination: Chapter5View()) {
+					Text("Exercise Chapter 5")
+				}
+				NavigationLink(destination: Chapter6View()) {
+					Text("Chapter 6")
+				}
       }
       .navigationBarTitle("Thinking in SwiftUI")
     }

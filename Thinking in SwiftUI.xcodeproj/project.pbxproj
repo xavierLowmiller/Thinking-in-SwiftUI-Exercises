@@ -32,6 +32,9 @@
 		4E4A829424966A650021E7E5 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A829324966A650021E7E5 /* World.swift */; };
 		4E65CEBA249974C300ACDD79 /* ResultConvenienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65CEB9249974C300ACDD79 /* ResultConvenienceTests.swift */; };
 		4E74D0CB2496969000B8A8E3 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E74D0CA2496969000B8A8E3 /* PhotoDetailView.swift */; };
+		4ED502CA24A5FADC0012A60B /* ImplicitAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED502C924A5FADC0012A60B /* ImplicitAnimations.swift */; };
+		4ED502CC24A60CB90012A60B /* Chapter5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED502CB24A60CB90012A60B /* Chapter5View.swift */; };
+		4ED502CE24A60D280012A60B /* Chapter6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED502CD24A60D280012A60B /* Chapter6View.swift */; };
 		4EDEF00D249F78B800C140AC /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEF00C249F78B800C140AC /* TableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +87,9 @@
 		4E4A829324966A650021E7E5 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		4E65CEB9249974C300ACDD79 /* ResultConvenienceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultConvenienceTests.swift; sourceTree = "<group>"; };
 		4E74D0CA2496969000B8A8E3 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
+		4ED502C924A5FADC0012A60B /* ImplicitAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitAnimations.swift; sourceTree = "<group>"; };
+		4ED502CB24A60CB90012A60B /* Chapter5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter5View.swift; sourceTree = "<group>"; };
+		4ED502CD24A60D280012A60B /* Chapter6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter6View.swift; sourceTree = "<group>"; };
 		4EDEF00C249F78B800C140AC /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +189,7 @@
 				4E1F1681249CD61B00A69CA5 /* Exercise Chapter 4 */,
 				4E1F168A249D132700A69CA5 /* Notes Chapter 5 */,
 				4EDEF00B249F787500C140AC /* Exercise Chapter 5 */,
+				4ED502C824A5FABA0012A60B /* Notes Chapter 6 */,
 				4E4A825D2494DF370021E7E5 /* Preview Content */,
 			);
 			path = "Thinking in SwiftUI";
@@ -230,10 +237,20 @@
 			path = "Exercise Chapter 2";
 			sourceTree = "<group>";
 		};
+		4ED502C824A5FABA0012A60B /* Notes Chapter 6 */ = {
+			isa = PBXGroup;
+			children = (
+				4ED502C924A5FADC0012A60B /* ImplicitAnimations.swift */,
+				4ED502CD24A60D280012A60B /* Chapter6View.swift */,
+			);
+			path = "Notes Chapter 6";
+			sourceTree = "<group>";
+		};
 		4EDEF00B249F787500C140AC /* Exercise Chapter 5 */ = {
 			isa = PBXGroup;
 			children = (
 				4EDEF00C249F78B800C140AC /* TableView.swift */,
+				4ED502CB24A60CB90012A60B /* Chapter5View.swift */,
 			);
 			path = "Exercise Chapter 5";
 			sourceTree = "<group>";
@@ -372,6 +389,7 @@
 				4E4A829424966A650021E7E5 /* World.swift in Sources */,
 				4E1F167D249CA43D00A69CA5 /* KnobView.swift in Sources */,
 				4E4A828C249573D10021E7E5 /* Photo.swift in Sources */,
+				4ED502CE24A60D280012A60B /* Chapter6View.swift in Sources */,
 				4E4A8288249571EF0021E7E5 /* PhotosList.swift in Sources */,
 				4E3D8E3F249806E200967D53 /* LoadingView.swift in Sources */,
 				4E1F1686249CD9C200A69CA5 /* Chapter4View.swift in Sources */,
@@ -381,6 +399,8 @@
 				4E1F1680249CADC600A69CA5 /* MeasureBehavior.swift in Sources */,
 				4E4A82562494DF360021E7E5 /* AppDelegate.swift in Sources */,
 				4E1F168C249D134100A69CA5 /* LayoutWithPreferenceKey.swift in Sources */,
+				4ED502CC24A60CB90012A60B /* Chapter5View.swift in Sources */,
+				4ED502CA24A5FADC0012A60B /* ImplicitAnimations.swift in Sources */,
 				4E4A8290249651FF0021E7E5 /* Remote.swift in Sources */,
 				4EDEF00D249F78B800C140AC /* TableView.swift in Sources */,
 				4E4A82582494DF360021E7E5 /* SceneDelegate.swift in Sources */,
