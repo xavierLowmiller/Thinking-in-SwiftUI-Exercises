@@ -20,9 +20,17 @@ extension View {
   }
 }
 
+extension AnyTransition {
+  static var bounce: AnyTransition {
+    .modifier(active: Bounce(times: 0, amplitude: 30),
+              identity: Bounce(times: 1, amplitude: 30))
+  }
+}
+
 struct BouncingView: View {
   @State private var taps = 0
   @State private var amplitude: CGFloat = 30
+  @State private var showRect = false
 
   var body: some View {
     VStack {
@@ -35,6 +43,18 @@ struct BouncingView: View {
           taps += 1
         }
       }.bounce(times: taps, amplitude: amplitude)
+      Divider()
+      Button("Trigger bouncy transition") {
+        showRect.toggle()
+      }
+      if showRect {
+        Color.purple
+          .frame(width: 100, height: 100)
+          .transition(.bounce)
+      } else {
+        Color.clear
+          .frame(width: 100, height: 100)
+      }
     }
   }
 }
