@@ -17,6 +17,8 @@ struct Chapter6View: View {
                      destination: ShakingView())
       NavigationLink("Bouncing Animation",
                      destination: BouncingView())
+      NavigationLink("Line Graph Animation",
+                     destination: LineGraphView())
 		}
 	}
 }
