@@ -13,16 +13,10 @@ struct Chapter6View: View {
                      destination: LoadingIndicatorImplicit())
       NavigationLink("Loading Indicator (Explicit)",
                      destination: LoadingIndicatorExplicit())
-      NavigationLink("Custom Animation",
+      NavigationLink("Shaking Animation",
                      destination: ShakingView())
-		}
-	}
-}
-
-struct Chapter6View_Previews: PreviewProvider {
-	static var previews: some View {
-		NavigationView {
-			Chapter6View()
+      NavigationLink("Bouncing Animation",
+                     destination: BouncingView())
 		}
 	}
 }

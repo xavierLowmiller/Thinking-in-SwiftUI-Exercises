@@ -17,6 +17,7 @@
 		4E2B040B24A6618B008E60F3 /* ExplicitAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B040A24A6618B008E60F3 /* ExplicitAnimations.swift */; };
 		4E2B040D24A6659A008E60F3 /* CustomAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B040C24A6659A008E60F3 /* CustomAnimations.swift */; };
 		4E2D05AC24A6771B00269CEF /* AnimatedTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D05AB24A6771B00269CEF /* AnimatedTransitions.swift */; };
+		4E2D05AF24A7067B00269CEF /* BounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D05AE24A7067B00269CEF /* BounceAnimation.swift */; };
 		4E3D8E3F249806E200967D53 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D8E3E249806E200967D53 /* LoadingView.swift */; };
 		4E3D8E412498147400967D53 /* XCTest+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D8E402498147400967D53 /* XCTest+Convenience.swift */; };
 		4E4A82562494DF360021E7E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A82552494DF360021E7E5 /* AppDelegate.swift */; };
@@ -69,6 +70,7 @@
 		4E2B040A24A6618B008E60F3 /* ExplicitAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimations.swift; sourceTree = "<group>"; };
 		4E2B040C24A6659A008E60F3 /* CustomAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimations.swift; sourceTree = "<group>"; };
 		4E2D05AB24A6771B00269CEF /* AnimatedTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTransitions.swift; sourceTree = "<group>"; };
+		4E2D05AE24A7067B00269CEF /* BounceAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimation.swift; sourceTree = "<group>"; };
 		4E3D8E3E249806E200967D53 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4E3D8E402498147400967D53 /* XCTest+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Convenience.swift"; sourceTree = "<group>"; };
 		4E4A82522494DF360021E7E5 /* Thinking in SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thinking in SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,14 @@
 			path = "Notes Chapter 5";
 			sourceTree = "<group>";
 		};
+		4E2D05AD24A7065900269CEF /* Exercise Chapter 6 */ = {
+			isa = PBXGroup;
+			children = (
+				4E2D05AE24A7067B00269CEF /* BounceAnimation.swift */,
+			);
+			path = "Exercise Chapter 6";
+			sourceTree = "<group>";
+		};
 		4E4A82492494DF360021E7E5 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 				4E1F168A249D132700A69CA5 /* Notes Chapter 5 */,
 				4EDEF00B249F787500C140AC /* Exercise Chapter 5 */,
 				4ED502C824A5FABA0012A60B /* Notes Chapter 6 */,
+				4E2D05AD24A7065900269CEF /* Exercise Chapter 6 */,
 				4E4A825D2494DF370021E7E5 /* Preview Content */,
 			);
 			path = "Thinking in SwiftUI";
@@ -418,6 +429,7 @@
 				4E4A825A2494DF360021E7E5 /* ContentView.swift in Sources */,
 				4E2D05AC24A6771B00269CEF /* AnimatedTransitions.swift in Sources */,
 				4E74D0CB2496969000B8A8E3 /* PhotoDetailView.swift in Sources */,
+				4E2D05AF24A7067B00269CEF /* BounceAnimation.swift in Sources */,
 				4E1F1683249CD63600A69CA5 /* Collapsible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,16 +6,16 @@ struct ContentView: View {
     NavigationView {
       List {
         NavigationLink(destination: PhotosList()) {
-          Text("Exercise Chapter 2")
+          Text("Chapter 2")
         }
         NavigationLink(destination: KnobView()) {
-          Text("Exercise Chapter 3")
+          Text("Chapter 3")
         }
         NavigationLink(destination: Chapter4View()) {
-          Text("Exercise Chapter 4")
+          Text("Chapter 4")
         }
 				NavigationLink(destination: Chapter5View()) {
-					Text("Exercise Chapter 5")
+					Text("Chapter 5")
 				}
 				NavigationLink(destination: Chapter6View()) {
 					Text("Chapter 6")
